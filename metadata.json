@@ -1,0 +1,6 @@
+{
+  "name": "SkyElite — Private Jet Charter",
+  "description": "Premium, accessible private jet aviation. Charter bespoke flights on your schedule with transparent rates and effortless booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

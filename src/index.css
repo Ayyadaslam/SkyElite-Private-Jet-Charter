@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply bg-gray-100 text-gray-900 dark:bg-[#0D1219] dark:text-slate-100 transition-colors;
+  }
+}
+
+@keyframes flightDash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.flight-path-dash {
+  stroke-dasharray: 5 5;
+  animation: flightDash 1.8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flight-path-dash {
+    animation: none;
+  }
+}
